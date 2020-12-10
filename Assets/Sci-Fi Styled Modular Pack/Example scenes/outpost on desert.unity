@@ -565,6 +565,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1512131210}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &41184046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 147512, guid: 7b45b788a1417934faed26ad07e2f502,
+    type: 3}
+  m_PrefabInstance: {fileID: 2034907860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!167 &41184047
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41184046}
+  m_Enabled: 1
+  m_MinDistance: 1
+  m_MaxDistance: 5
+  m_ReverbPreset: 11
+  m_Room: -1000
+  m_RoomHF: -1000
+  m_DecayTime: 10.05
+  m_DecayHFRatio: 0.23
+  m_Reflections: -602
+  m_ReflectionsDelay: 0.02
+  m_Reverb: 198
+  m_ReverbDelay: 0.03
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!1001 &45897808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14952,7 +14982,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
