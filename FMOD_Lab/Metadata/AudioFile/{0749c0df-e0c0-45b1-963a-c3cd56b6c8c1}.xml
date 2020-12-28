@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{0749c0df-e0c0-45b1-963a-c3cd56b6c8c1}">
+		<property name="assetPath">
+			<value>482678_burgerboys_rat-noises (online-audio-converter.com).mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>21.237551020408162</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d8489c1f-a2d3-47c0-a5df-700c0686a829}</destination>
+		</relationship>
+	</object>
+</objects>

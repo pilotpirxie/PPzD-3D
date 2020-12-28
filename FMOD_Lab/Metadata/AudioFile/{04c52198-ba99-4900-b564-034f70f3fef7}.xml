@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{04c52198-ba99-4900-b564-034f70f3fef7}">
+		<property name="assetPath">
+			<value>Footsteps/walk4.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.49086167800453517</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d8489c1f-a2d3-47c0-a5df-700c0686a829}</destination>
+		</relationship>
+	</object>
+</objects>

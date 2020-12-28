@@ -1,4 +1,5 @@
 using System;
+using FMODUnity;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
@@ -7,7 +8,6 @@ using Random = UnityEngine.Random;
 namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (CharacterController))]
-    [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
@@ -24,10 +24,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-        [SerializeField] AudioClip[] runningFootsteps;
-        [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
-        [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -41,9 +37,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_StepCycle;
         private float m_NextStep;
         private bool m_Jumping;
-        private AudioSource m_AudioSource;
 
-        // Use this for initialization
         private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
@@ -54,7 +48,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
-            m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
 
@@ -87,8 +80,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayLandingSound()
         {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
+            RuntimeManager.PlayOneShot("event:/Land");
+
             m_NextStep = m_StepCycle + .5f;
         }
 
@@ -137,8 +130,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayJumpSound()
         {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
+            RuntimeManager.PlayOneShot("event:/Jump");
         }
 
 
@@ -167,15 +159,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 return;
             }
-            // pick & play a random footstep sound from the array,
-            // excluding sound at index 0
-            var foostepsClips = m_IsWalking ? m_FootstepSounds : runningFootsteps;
-            int n = Random.Range(1, foostepsClips.Length);
-            m_AudioSource.clip = foostepsClips[n];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            foostepsClips[n] = foostepsClips[0];
-            foostepsClips[0] = m_AudioSource.clip;
+
+            RuntimeManager.PlayOneShot("event:/Footstep");
         }
 
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DataFile" id="{e17b2bb6-ee49-4a7c-8a81-2076d8c252e4}">
+		<property name="assetPath">
+			<value>Footsteps/BOOT_METAL1_08-04_MED WALK_416.L.ogg.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d8489c1f-a2d3-47c0-a5df-700c0686a829}</destination>
+		</relationship>
+	</object>
+</objects>

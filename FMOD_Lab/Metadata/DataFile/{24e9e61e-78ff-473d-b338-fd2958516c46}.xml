@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DataFile" id="{24e9e61e-78ff-473d-b338-fd2958516c46}">
+		<property name="assetPath">
+			<value>Sci-Fi/PM_FSSF2_TONAL_ACHIEVEMENT_POWERUP_EVENT_19.ogg.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d8489c1f-a2d3-47c0-a5df-700c0686a829}</destination>
+		</relationship>
+	</object>
+</objects>

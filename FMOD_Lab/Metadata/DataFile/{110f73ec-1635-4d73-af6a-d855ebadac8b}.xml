@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DataFile" id="{110f73ec-1635-4d73-af6a-d855ebadac8b}">
+		<property name="assetPath">
+			<value>Sci-Fi/PM_FSSF2_MICROTECH_29_FOOTSTEP.ogg.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d8489c1f-a2d3-47c0-a5df-700c0686a829}</destination>
+		</relationship>
+	</object>
+</objects>

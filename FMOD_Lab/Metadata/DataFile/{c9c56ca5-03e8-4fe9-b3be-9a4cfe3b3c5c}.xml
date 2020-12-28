@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DataFile" id="{c9c56ca5-03e8-4fe9-b3be-9a4cfe3b3c5c}">
+		<property name="assetPath">
+			<value>Sci-Fi/PM_FSSF2_BUTTONS_SWITCHES_11.ogg.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d8489c1f-a2d3-47c0-a5df-700c0686a829}</destination>
+		</relationship>
+	</object>
+</objects>
