@@ -11,11 +11,13 @@ public class AudioTrigger : MonoBehaviour
         {
             if (isTriggeringInside)
             {
-                RuntimeManager.GetVCA("vca:/DesertOutside").setVolume(0);
+                RuntimeManager.GetVCA("vca:/Outside").setVolume(0);
+                RuntimeManager.GetVCA("vca:/Inside").setVolume(1);
             }
             else
             {
-                RuntimeManager.GetVCA("vca:/DesertOutside").setVolume(1);
+                RuntimeManager.GetVCA("vca:/Outside").setVolume(1);
+                RuntimeManager.GetVCA("vca:/Inside").setVolume(0);
             }
         }
     }

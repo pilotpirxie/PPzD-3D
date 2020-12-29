@@ -9,5 +9,6 @@ public class DesertAudio : MonoBehaviour
     {
         RuntimeManager.PlayOneShot("event:/AmbientOutside");
         RuntimeManager.PlayOneShot("event:/AmbientInside");
+        RuntimeManager.GetVCA("vca:/Inside").setVolume(0);
     }
 }
